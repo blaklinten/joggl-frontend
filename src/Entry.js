@@ -3,8 +3,6 @@ import './App.css';
 
 export const Entry = ({ name, project, client, description }) => {
 
-if (!name) return <div />;
-
 return (
       <table>
         <tbody>
