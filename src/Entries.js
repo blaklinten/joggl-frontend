@@ -8,7 +8,7 @@ import { entries } from './data.js';
 export const Entries = () => {
     return (
         <>
-        <Header/>
+        <Header title="A collection of entries"/>
         <div className="entry-container"> 
             { entries.map((data, key) => {
                 return (
@@ -27,3 +27,4 @@ export const Entries = () => {
         </>
     );
 };
+

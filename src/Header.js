@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const Header = () => {
+export const Header = ({ title }) => {
 
     return (
         <header className="header">
-            <h2>A collection of entries </h2>
+            <h2>{title}</h2>
         </header>
     );
 };
