@@ -5,6 +5,7 @@ import './App.css';
 import { Status }  from './Status';
 import { Choises }  from './Choises';
 import { StartNewEntry }  from './StartNewEntry';
+import { EditEntry }  from './EditEntry';
 
 export const Body = ({ state, setState }) => {
 
@@ -25,6 +26,10 @@ export const Body = ({ state, setState }) => {
     if(state.starting){
         return(
             <StartNewEntry setState={setState}/>
+        );
+    } else if(state.editing){
+        return(
+            <EditEntry state={state} setState={setState}/>
         );
     } else {
 

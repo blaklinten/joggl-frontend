@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import './App.css';
 
-export const StartNewEntry = ({ state, setState }) => {
+export const StartNewEntry = ({ setState }) => {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -27,14 +27,14 @@ export const StartNewEntry = ({ state, setState }) => {
         axios.get('http://localhost:8080/get-status')
             .then( (res) => {
                 if(res.status === 200){
-                    setState({...state, running: true, entry: res.data});
+                    setState({running: true, entry: res.data});
                 }
             })
             .catch( function (error) {
                 console.log(error);
             });
         
-        setState({...state, starting: false});
+        setState({starting: false});
     }
 
     return (
