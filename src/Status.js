@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
 
-export const Status = () => {
+import { EntryStatus } from './EntryStatus';
 
-    return(
-        <div>
-            This is the current status!
-        </div>
-    );
+export const Status = ({ state }) => {
+
+    if( state.running ){
+        return(
+            <EntryStatus entry={state.entry} />
+        );
+    } else {
+        return(
+            <p> No entry is currently running...  </p>
+        );
+    }
 };
