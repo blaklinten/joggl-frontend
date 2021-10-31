@@ -24,6 +24,14 @@ function App() {
 
             </div>
         );
+    } else if(state.editing){
+
+        return (
+            <div className="App">
+                <Header title="Editing existing entry"/>
+                <Body state={state} setState={setState}/>
+            </div>
+        );
     } else {
 
         return (
